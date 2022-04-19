@@ -133,4 +133,4 @@
 
 ### 后记
 
-对于settings.json中的配置以及各.tex模板文档，可根据自己需求修改完善。关于TeXLive以及VSCode的安装，请移步互联网。关于LaTeX的相关知识，请参考互联网或刘海洋《LaTeX入门》。
+对于settings.json中的配置以及各`.tex`模板文档，可根据自己需求修改完善。关于TeXLive以及VSCode的安装，请移步互联网。关于LaTeX的相关知识，请参考互联网或刘海洋《LaTeX入门》。
