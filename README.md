@@ -120,11 +120,11 @@
 
 ### 正式开始
 
-使用VSCode打开工作文件夹，可以修改任意`.tex`文件。保存后会自动编译，点击右上角的`View LaTeX PDF file`按键可以实时预览生成的`.pdf`文件。
+使用VSCode打开工作文件夹work，可以修改任意`.tex`文件。保存后会自动编译，点击右上角的`View LaTeX PDF file`按键可以实时预览生成的`.pdf`文件。
 
 ### 文档介绍
 
-文件夹中包含image子文件夹，以及main，settings和problem系列`.tex`文件。
+文件夹work中包含image子文件夹，以及main，settings和problem系列`.tex`文件。
 
 - image子文件夹作用是存放作业中可能需要用的图片。
 - main是主文件。只有这一个文件会被编译成pdf文件，同时产生`.aux`，`.log`等附加文件。main主要工作方式是依次input各problem文件，使各个作业题按顺序显示在pdf文件中。
