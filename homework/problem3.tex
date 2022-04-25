@@ -1,0 +1,49 @@
+验证半占空的单极性矩形波基带信号, 存在$f_s=\frac{1}{T_s}$的离散谱线.
+
+\begin{solution}
+    定义在一个周期$(-\frac{T_s}{2},\ \frac{T_s}{2}]$内的半占空的单极性矩形波基带信号$g(t)$为
+    \begin{equation}
+        g(t)=
+        \left\{
+        \begin{aligned}
+             & 1, & \left\lvert t \right\rvert \leqslant \frac{T_s}{4}; \\
+             & 0, & else.                                               \\
+        \end{aligned}
+        \right.
+    \end{equation}
+    对其做周期延拓,得到的半占空的单极性矩形波基带信号$f(t)$为
+    \begin{equation}
+        f(t)=\sum_{n = -\infty}^{\infty}g(t-nT_s)
+    \end{equation}
+    其可以展成指数型傅里叶级数
+    \begin{equation}
+        f(t)=\sum_{n = -\infty}^{\infty}F_n \e ^{j 2\pi n f_s t}
+    \end{equation}
+    式中,有$f_s=\frac{1}{T_s}$,且
+    \begin{equation}
+        F_n=\frac{1}{T_s}\int_{T_s} f(t) \e ^{-j 2\pi n f_s t } \dt=\frac{1}{2}Sa(\frac{n\pi}{2})
+    \end{equation}
+    其中,抽样函数$Sa(x)$定义为
+    \begin{equation}
+        Sa(x)=
+        \left\{
+        \begin{aligned}
+             & \frac{\sin(x)}{x}, & x\neq 0; \\
+             & 1,                 & x =0.    \\
+        \end{aligned}
+        \right.
+    \end{equation}
+    根据周期信号傅里叶变换公式
+    \begin{equation}
+        \sum_{n = -\infty}^{\infty}F_n \e ^{j 2\pi n f_s t} \rightarrow \sum_{n = -\infty}^{\infty}F_n\delta(f-nf_s)
+    \end{equation}
+    我们有$f(t)$的频谱
+    \begin{equation}
+        F(f)=\sum_{n=-\infty}^{\infty}\frac{1}{2}Sa(\frac{n\pi}{2})\delta(f-nf_s)
+    \end{equation}
+    显然其为离散谱线,因此只需验证$F(f_s)\neq 0$.取$f=f_s=\frac{1}{T_s}$,可得
+    \begin{equation}
+        F(f_s)=\frac{1}{2}Sa(\frac{\pi}{2})\delta[(n-1)f_s]=\frac{1}{\pi}\delta(n-1)
+    \end{equation}
+    其在$n=1$处有冲激,显然不为0.这就是需要验证的结果.
+\end{solution}

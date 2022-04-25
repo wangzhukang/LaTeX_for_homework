@@ -1,0 +1,39 @@
+% 导入设置选项
+\input{settings.tex}
+
+\begin{document}
+
+% 修改作业标题和页眉页脚信息
+\title{通信原理\ \ 作业1}
+\lhead{Communication Principles}
+\rhead{Assignment 1}
+\cfoot{\thepage}
+
+% 标题页
+\begin{titlepage}
+  \includegraphics[scale=0.3]{image/logo.jpg}
+  \center
+  \quad\\[1.5cm]
+  \textbf{\Large Shandong University}\\[0.5cm]
+  \textbf{\large School of Information Science and Engineering}\\[1.5cm]
+  \makeatletter
+  \HRule\\[0.4cm]
+  {\heiti \zihao{2} \@title}\\
+  \HRule\\[2.5cm]
+  \zihao{4}
+  \begin{tabular}{ll}
+    \textbf{姓名:} & 王祝康       \\
+    \textbf{学号:} & 202000180237 \\
+    \textbf{班级:} & 通信20.3     \\
+    \textbf{日期:} & \today       \\
+  \end{tabular}
+\end{titlepage}
+
+% 按顺序显示题目
+\begin{enumerate}
+  \item \input{problem1.tex}
+  \item \input{problem2.tex}
+  \item \input{problem3.tex}
+\end{enumerate}
+
+\end{document}

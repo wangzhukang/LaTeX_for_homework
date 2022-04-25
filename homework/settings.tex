@@ -1,0 +1,57 @@
+% 文档类
+\documentclass[UTF8,fontset=windows,titlepage]{ctexart}
+
+% 宏包
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{accents}
+
+% 样式设计
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\setlength{\textheight}{650pt}
+\setlength{\footskip}{40pt}
+
+% 自定义环境与命令
+
+% 问题的解答，以"Solution."开头，黑色方块结束表明解答完成
+\newenvironment{solution}
+{\renewcommand\qedsymbol{$\blacksquare$}
+    \begin{proof}[Solution]\ \\}
+        {\end{proof}}
+
+% 插入图片时使用，浮动体可出现在环境周围文本处及顶部，居中，图片描述字体字号为small，bf样式；当图片描述过长时，使其文本段距离页面左右两侧距离限制在60pt
+\newenvironment{myfigure}
+{\begin{figure}[ht]
+        \centering
+        \captionsetup{font={small,bf}}
+        \setcaptionmargin{60pt}}
+        {\end{figure}}
+
+
+% 水平横线，宽度0.3mm
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+
+% 文本着色：红、绿、蓝
+\newcommand{\red}[1]{\textcolor[rgb]{1,0,0}{#1}}
+\newcommand{\green}[1]{\textcolor[rgb]{0,1,0}{#1}}
+\newcommand{\blue}[1]{\textcolor[rgb]{0,0,1}{#1}}
+
+% 自然常数e
+\newcommand{\e}{\mathrm{e}}
+
+% 积分号dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% 积分号dt
+\newcommand{\dt}{\mathrm{d}t}
+
+% 使表格宽度占满页面，自适应调整列间距与高度；推荐当表格列数很多时使用
+\newcommand{\widetable}[1]{\resizebox{\linewidth}{!}{#1}}
